@@ -141,5 +141,6 @@ export const visibility = () => {
     }
   };
 
+  // for handling use strict case
   window.visibly.init();
 };
