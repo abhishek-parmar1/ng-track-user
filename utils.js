@@ -60,7 +60,7 @@ export const isElementInView = (field, viewport) => {
   buffered = (field.height * (50/100));
   partialView = ((viewport.bottom - buffered) >= field.top && (field.bottom - buffered) > viewport.top);
 
-  return partialView && field.height > viewport.height;
+  return partialView && field.height > 3* (viewport.height/4);
 
 }
 
