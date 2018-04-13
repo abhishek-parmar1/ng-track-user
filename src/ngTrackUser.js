@@ -62,11 +62,9 @@ const NgTrackUser = () => {
         });      
 
         // check if element in view
-        if (isElementInView(fieldDimensions, viewPortDimensions) && !isPaused) {
-          
+        if (isElementInView(fieldDimensions, viewPortDimensions) && !isPaused) {          
           // incerment the time
-          timer++;
-          
+          timer++;          
           // log the time for section
           console.log(nativeEl.id, timer);
         }
@@ -79,10 +77,8 @@ const NgTrackUser = () => {
       // clear the interval to prevent memory leak
       clearInterval(interval);
       if(timer) {
-        
         // log the final time for the element
         console.log(nativeEl.id, timer);
-
         /* Call your trackings here.*/
       }
     });

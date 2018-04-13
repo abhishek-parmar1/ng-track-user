@@ -60,13 +60,10 @@ export const isElementInView = (field, viewport) => {
    // Field bigger than viewport
    // viewport.height / 2 because below that field is considered in partial view case
   if (field.height > viewport.height) {
-
     cond = (viewport.bottom - field.top) > (viewport.height / 2) && (field.bottom - viewport.top) > (viewport.height / 2);
-
     if (cond) {
       return true;
     }
-
   }
 
   // Partially in view (50%) for elements which have height greater than 3/4 of viewport
@@ -74,7 +71,6 @@ export const isElementInView = (field, viewport) => {
   partialView = ((viewport.bottom - buffered) >= field.top && (field.bottom - buffered) > viewport.top);
 
   return partialView && field.height > 3* (viewport.height/4);
-
 }
 
 /*!
