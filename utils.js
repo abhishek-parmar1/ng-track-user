@@ -1,4 +1,8 @@
-// TODO : add description here
+/**
+ * Calculate and return the first scrollable parentof the node.
+ * @param  {Object} node  
+ * @return {Object}
+ */
 export function getFirstScrollableParent(node) {
   let isScrollable;
 
@@ -23,21 +27,30 @@ export function getFirstScrollableParent(node) {
   }
 }
 
-// TODO : add description here
-export const getOffsetTop = (elem) => {
+/**
+ * Calculate and return the offsetTop of node from its root parent.
+ * @param  {Object} node  
+ * @return {Number}
+ */
+export const getOffsetTop = (node) => {
 
-  if(elem.offsetParent === undefined)
+  if(node.offsetParent === undefined)
     return 0;
 
   let top = 0;
-  if(elem.offsetParent)
-    top = elem.offsetTop + getOffsetTop(elem.offsetParent);
+  if(node.offsetParent)
+    top = node.offsetTop + getOffsetTop(node.offsetParent);
   return top >= 0 ? top : 0;
 }
 
-// TODO : add description here
+/**
+ * True when the given field is in viewport and satisfies the conditions to be in view.
+ * @param  {Object} field  
+ * @param  {Object} viewport 
+ * @return {Boolean}
+ */
 export const isElementInView = (field, viewport) => {
-  var cond, buffered, partialView;
+  let cond, buffered, partialView;
 
   // Field entirely within viewport
   if ((field.bottom <= viewport.bottom) && (field.top >= viewport.top)) {
@@ -56,7 +69,7 @@ export const isElementInView = (field, viewport) => {
 
   }
 
-  // Partially in view (50%) for elements which have height greater than viewport
+  // Partially in view (50%) for elements which have height greater than 3/4 of viewport
   buffered = (field.height * (50/100));
   partialView = ((viewport.bottom - buffered) >= field.top && (field.bottom - buffered) > viewport.top);
 
