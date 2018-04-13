@@ -91,6 +91,6 @@ const NgTrackUser = () => {
   }
 };
 
-NgTrackU.NAME = "ngTrackUser";
+NgTrackUser.NAME = "ngTrackUser";
 
-export default NgTrackU;
+export default NgTrackUser;
