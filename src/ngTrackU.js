@@ -12,7 +12,7 @@ import {
 /**
  * Angular directive (using ES-6)
  */
-const NgTrackU = () => {
+const NgTrackUser = () => {
   
   return {
     restrict: "A",
@@ -91,6 +91,6 @@ const NgTrackU = () => {
   }
 };
 
-NgTrackU.NAME = "ngTrackU";
+NgTrackU.NAME = "ngTrackUser";
 
 export default NgTrackU;
