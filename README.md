@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Deployment
 
-```
+```javascript
   // import the directive
   import NgTrackUser from "./src/ngTrackUser";
 
@@ -30,7 +30,7 @@ These instructions will get you a copy of the project up and running on your loc
   .directive(NgTrackUser.NAME, NgTrackUser);
 ```
 
-```
+```html
   <!-- Use the directive in html -->
   <!-- Section to track-->
   <div ng-track-user="current-section-id" id="current-section-id">
