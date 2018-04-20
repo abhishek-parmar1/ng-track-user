@@ -9,6 +9,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Download the repository and add the files to your project.
 * Directive is used to track the time spend by user on the different sections of the pages.
 * Time will be tracked of all the sections which are in view.
+* Call to your tracking function with payload will be done repeatedly after 20 seconds by default (for all sections). 
 
 ## Directive rules to identify a section of a page is in view:
 
@@ -36,6 +37,13 @@ These instructions will get you a copy of the project up and running on your loc
   <div ng-track-user="current-section-id" id="current-section-id">
     <!-- content -->
   </div>  
+```
+
+```javascript
+  // to change the default time limit for tracking calls, assign this variable a limit of your choice
+  // a constant for time interval limit
+  const globalWatcherLimit = 20;
+
 ```
 
 ## Example
